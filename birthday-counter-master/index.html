@@ -12,9 +12,11 @@
 </head>
 
 <body>
+  
   <canvas id=c></canvas>
   <canvas id="confetti"></canvas>
   <div class="container" id="count">
+    <embed src="song/song.mp3" loop="true" autostart="true" width="2" height="0">
     <h1 id="head">Countdown to your birthday:</h1>
     <ul>
       <li><span id="day"></span>days</li>
@@ -25,12 +27,20 @@
   </div>
   <div id="merrywrap" class="merrywrap">
     <canvas id="snowfall"></canvas>
-    <div class="giftbox">
+    <div class="giftbox" onclick="clickme()">
       <div class="cover">
         <div></div>
+        
       </div>
       <div class="box"></div>
     </div>
+    <audio src="song.mp3" loop hidden id="audio">
+    </audio>
+    <script>
+        function clickme(){
+            document.getElementById("audio").play()
+        }
+    </script>
 </body>
 <script src="scripts/confetti.min.js" charset="utf-8"></script>
 <script src="scripts/index.js" charset="utf-8"></script>
