@@ -180,3 +180,27 @@ li span {
       opacity: 0;
  }
 }
+
+#barcode{
+  width: 0rem;
+  height: 0rem;
+  transition: width 1s, height 1s;
+  transition-delay: 8s;
+  animation-name: anim;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+.qr{
+  position: absolute;
+  left: 80%;
+  /* margin-left: -10rem; */
+  bottom: 0;
+  z-index: 9;
+}
+@keyframes anim {
+  0%   {transform: scale(1) ;}
+  25%  {transform: scale(0.9) rotate(10deg);}
+  50%  {transform: scale(1.2) rotate(-10deg);}
+  75%  {transform: scale(0.8);}
+  100% {transform: scale(1);}
+}

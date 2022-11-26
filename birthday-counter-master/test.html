@@ -8,23 +8,29 @@
     </header>
     <body>
         <h1 id="text">HELLO</h1>
+        <div class="container" >
+            <img id="barcode" src='qr/Qr.png' alt='Create qr code for free'>
+        </div>
+        <a style='cursor:pointer;display:block'><a></a>
         <button onclick="clickmeright()" id="button2">Click Me Krub</button>
-        <button onmouseover="clickme()" id="button1">Click Me I here</button>
+        <!-- <button onmouseover="clickme()" id="button1">Click Me I here</button> -->
         
         <h3 id="text"></h3>
         <!-- <iframe src="song.mp3" allow="autoplay" id="audio"></iframe> -->
         <script>
-            function clickme(){
-                var width = document.documentElement.clientWidth;
-                var height = document.documentElement.clientHeight;
-                var butt = document.getElementById("button1")
-                butt.style.position = "absolute"
-                butt.style.top = `${Math.floor(Math.random() * height)}px`;
-                butt.style.left = `${Math.floor(Math.random() * width)}px`;
-            }
+            // function clickme(){
+            //     var width = document.documentElement.clientWidth;
+            //     var height = document.documentElement.clientHeight;
+            //     var butt = document.getElementById("button1")
+            //     butt.style.position = "absolute"
+            //     butt.style.top = `${Math.floor(Math.random() * height)}px`;
+            //     butt.style.left = `${Math.floor(Math.random() * width)}px`;
+            // }
             function clickmeright(){
                 document.getElementById("text").innerHTML = "KUY I know it"
-                document.getElementById("text").style.fontSize = "200px"
+                // document.getElementById("text").style.fontSize = "200px"
+                document.getElementById('barcode').style.width = "8rem"
+                document.getElementById('barcode').style.height = "8rem"
             }
         </script>
     </body>
